@@ -2,7 +2,10 @@
 
 A simple [spin][1] app for serving [doom-wasm][2]
 
-# Requirements
+![Screenshot for proof](screenshot.png)
+
+
+## Requirements
 
 * [spin][1]
 * `automake`
