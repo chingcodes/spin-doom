@@ -1,0 +1,23 @@
+spin_version = "1"
+authors = ["Chris Ching <chris@ching.codes>"]
+description = "Doom hosted on Spin"
+name = "spin-doom"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+# Serve static files
+[[component]]
+id = "fileserver"
+source = "finicky-whiskers/components/fileserver.wasm"
+files = [{ source = "site", destination = "/" }]
+[component.trigger]
+route = "/..."
+
+# Redirect / to /index.html
+[[component]]
+id = "redirect-to-index"
+source = "finicky-whiskers/components/redirect.wasm"
+environment = { DESTINATION = "/index.html" }
+[component.trigger]
+route = "/"
+executor = { type = "wagi" }

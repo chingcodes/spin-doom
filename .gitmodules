@@ -1,0 +1,6 @@
+[submodule "doom-wasm"]
+	path = doom-wasm
+	url = https://github.com/cloudflare/doom-wasm.git
+[submodule "finicky-whiskers"]
+	path = finicky-whiskers
+	url = https://github.com/fermyon/finicky-whiskers.git
